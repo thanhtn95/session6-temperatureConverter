@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <label>Fahrenheit: </label>
+    <input id="inp" type="number" onload="fConverter()" onchange="fConverter()" placeholder="Fahrenheit">
+</p>
+<p id="outp"></p>
+</body>
+<script>
+    function fConverter() {
+        let inp = parseFloat(document.getElementById("inp").value);
+        let result = (inp - 32) / 1.8;
+        document.getElementById("outp").innerText = "Celsius: " + result;
+    }
+</script>
+</html>
